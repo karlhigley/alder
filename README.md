@@ -1,4 +1,5 @@
-# alder
+# alder [![Gem Version](https://badge.fury.io/rb/alder.svg)](https://badge.fury.io/rb/alder) [![Build Status](https://travis-ci.org/karlhigley/alder.svg?branch=master)](https://travis-ci.org/karlhigley/alder)
+
 A Ruby library for transforming hashes
 
 ## Usage
