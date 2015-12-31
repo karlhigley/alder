@@ -23,7 +23,7 @@ module Alder
     def key_match(key, hash)
       matches = []
       if key.is_a?(Regexp)
-        hash.each do |k, v|
+        hash.keys.each do |k|
           matches << k if key =~ k
         end
       else
