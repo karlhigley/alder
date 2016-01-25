@@ -2,6 +2,10 @@
 
 A Ruby library for transforming hashes
 
+## Motivation
+
+Sometimes back-end services return aggregates that contain essentially the same information that existing domain models use, but in a slightly different format. It would be nice to be able to easily transform that data into a format compatible with existing models (e.g. ActiveRecord models that use accepts_nested_attributes_for).
+
 ## Usage
 
 Mappings represent bidirectional hash transformations. The `Mapping` class provides a simple DSL, with `up`, `down`, and `mapping` methods.
@@ -27,8 +31,8 @@ Mappings can be composed with the `mapping` method, which includes the transform
 ```ruby
 class ExampleMapping < Alder::Mapping
   mapping KeyMapping
-  
-  up :key3 => :_ do |match| 
+
+  up :key3 => :_ do |match|
   	match[:key3] += " is now value3"
   end
 
